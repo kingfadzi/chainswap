@@ -58,11 +58,11 @@ export const MORE_CARDS = [
     cta: 'Provide liquidity',
     elementName: InterfaceElementName.ABOUT_PAGE_EARN_CARD,
   },
- {
-    to: 'https://docs.chainalysis.com/api/kyt/#welcome-to-the-kyt-api',
+  {
+    to: 'https://docs.uniswap.org',
     external: true,
-    title: 'Know Your Transaction',
-    description: 'Chainalysis KYT is an automated transaction monitoring and compliance solution.',
+    title: 'Build dApps',
+    description: 'Build apps and tools on the largest DeFi protocol on Ethereum.',
     lightIcon: <Terminal color={lightTheme.textTertiary} size={48} />,
     darkIcon: <StyledCardLogo src={darkTerminalImgSrc} alt="Developers" />,
     cta: 'Developer docs',

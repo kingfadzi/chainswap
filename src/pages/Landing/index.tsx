@@ -319,53 +319,7 @@ export default function Landing() {
   return (
     <Trace page={InterfacePageName.LANDING_PAGE} shouldLogImpression>
       {showContent && (
-        <PageContainer isDarkMode={isDarkMode} data-testid="landing-page">
-          <LandingSwapContainer>
-            <TraceEvent
-              events={[BrowserEvent.onClick]}
-              name={SharedEventName.ELEMENT_CLICKED}
-              element={InterfaceElementName.LANDING_PAGE_SWAP_ELEMENT}
-            >
-              {swapWidgetEnabled ? (
-                <WidgetLandingLink to="/swap">
-                  <Swap />
-                </WidgetLandingLink>
-              ) : (
-                <Link to="/swap">
-                  <LandingSwap />
-                </Link>
-              )}
-            </TraceEvent>
-          </LandingSwapContainer>
-          <Gradient isDarkMode={isDarkMode} />
-          <GlowContainer>
-            <Glow />
-          </GlowContainer>
-          <ContentContainer isDarkMode={isDarkMode}>
-            <TitleText isDarkMode={isDarkMode}>Trade crypto & NFTs with confidence</TitleText>
-            <SubTextContainer>
-              <SubText>Buy, sell, and explore tokens and NFTs</SubText>
-            </SubTextContainer>
-            <ActionsContainer>
-              <TraceEvent
-                events={[BrowserEvent.onClick]}
-                name={SharedEventName.ELEMENT_CLICKED}
-                element={InterfaceElementName.CONTINUE_BUTTON}
-              >
-                <ButtonCTA as={Link} to="/swap">
-                  <ButtonCTAText>Get started</ButtonCTAText>
-                </ButtonCTA>
-              </TraceEvent>
-            </ActionsContainer>
-            <LearnMoreContainer
-              onClick={() => {
-                cardsRef?.current?.scrollIntoView({ behavior: 'smooth' })
-              }}
-            >
-              <Trans>Learn more</Trans>
-              <LearnMoreArrow />
-            </LearnMoreContainer>
-          </ContentContainer>
+        <PageContainer isDarkMode={isDarkMode} data-testid="landing-page">                       
           <AboutContentContainer isDarkMode={isDarkMode}>
             <CardGrid cols={2} ref={cardsRef}>
               {MAIN_CARDS.map(({ darkBackgroundImgSrc, lightBackgroundImgSrc, ...card }) => (
@@ -381,8 +335,8 @@ export default function Landing() {
                 <Card {...card} icon={isDarkMode ? darkIcon : lightIcon} key={card.title} type={CardType.Secondary} />
               ))}
             </CardGrid>
-            <ProtocolBanner />
-            <AboutFooter />
+          
+          
           </AboutContentContainer>
         </PageContainer>
       )}

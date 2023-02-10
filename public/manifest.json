@@ -21,10 +21,10 @@
     }
   ],
   "orientation": "portrait",
-  "name": "Uniswap",
-  "description": "Swap or provide liquidity on the Uniswap Protocol",
+  "name": "Chainswap",
+  "description": "Swap or provide liquidity on the Chainswap Protocol",
   "iconPath": "./images/256x256_App_Icon_Pink.svg",
-  "short_name": "Uniswap",
+  "short_name": "Chainwap",
   "start_url": ".",
-  "theme_color": "#FC72FF"
+  "theme_color": "#00948d"
 }
